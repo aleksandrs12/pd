@@ -1,10 +1,9 @@
-from msilib.schema import File
 import re
 
 
 
-a = open("filehandler.txt", "r")
-a = a.read()
+txt = open("filehandler.txt", "r")
+txt = txt.read()
 
 
 class FileHandler:
@@ -40,6 +39,7 @@ class FileHandler:
             sum += 1
         return sum 
 
-a = FileHandler(a)
+txt = FileHandler(txt)
 
-print(a.get_number_occ())
+
+print('number count: ', txt.get_number_occ(), '\nsum of all numbers: ',txt.get_number_sum(), '\nletter count: ', txt.how_many(input('\nwhich letter do you want to find: ')))
